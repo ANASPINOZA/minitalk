@@ -6,7 +6,7 @@
 /*   By: aadnane <aadnane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:02:21 by aadnane           #+#    #+#             */
-/*   Updated: 2022/05/15 16:01:09 by aadnane          ###   ########.fr       */
+/*   Updated: 2022/05/19 11:44:04 by aadnane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,11 @@ void		ft_dec_to_bin(char c, int pid)
 	char	res;
 	
 	i = 0;
-	base = 0b00000001;
+	base = 1;
 	while (i < 8)
 	{
 		res = base & c;
-		usleep (600);
-		if (res == 0b00000000)
+		if (res == 0)
 		{
 			// write(1, "0\n", 2);
 			kill(pid, SIGUSR1);
@@ -58,6 +57,7 @@ void		ft_dec_to_bin(char c, int pid)
 			// write(1, "1\n", 2);
 			kill(pid, SIGUSR2);
 		}
+		usleep (600);
 		base = base << 1;
 		i++;
 	}
