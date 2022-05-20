@@ -6,7 +6,7 @@
 /*   By: aadnane <aadnane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:51:46 by aadnane           #+#    #+#             */
-/*   Updated: 2022/05/18 16:09:13 by aadnane          ###   ########.fr       */
+/*   Updated: 2022/05/19 22:47:01 by aadnane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,8 @@ int		ft_strlen(char *str);
 void	ft_putchar(char c);
 int		is_bin(char c);
 int		ft_bin_to_dec(char *str);
-void	ft_putstr(char *str);
 void	ft_dec_to_bin(char c, int pid);
 char	*ft_strdup(const char *s1);
 void	ft_bzero(void *s, size_t n);
-
-
 
 #endif

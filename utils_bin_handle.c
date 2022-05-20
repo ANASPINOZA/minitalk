@@ -6,21 +6,21 @@
 /*   By: aadnane <aadnane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:02:21 by aadnane           #+#    #+#             */
-/*   Updated: 2022/05/19 11:44:04 by aadnane          ###   ########.fr       */
+/*   Updated: 2022/05/19 22:48:22 by aadnane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int		is_bin(char c)
+int	is_bin(char c)
 {
 	if (c == '0')
-			return (0);
+		return (0);
 	else
-			return (1);
+		return (1);
 }
 
-int		ft_bin_to_dec(char *str)
+int	ft_bin_to_dec(char *str)
 {
 	int		i;
 	int		res;
@@ -36,29 +36,38 @@ int		ft_bin_to_dec(char *str)
 	return (res);
 }
 
-void		ft_dec_to_bin(char c, int pid)
+void	ft_dec_to_bin(char c, int pid)
 {
 	int		i;
 	char	base;
 	char	res;
-	
+
 	i = 0;
-	base = 1;
+	base = 0b00000001;
 	while (i < 8)
 	{
 		res = base & c;
-		if (res == 0)
-		{
-			// write(1, "0\n", 2);
+		if (res == 0b00000000)
 			kill(pid, SIGUSR1);
-		}
 		else
-		{
-			// write(1, "1\n", 2);
 			kill(pid, SIGUSR2);
-		}
-		usleep (600);
+		usleep (950);
 		base = base << 1;
 		i++;
 	}
+}
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t			i;
+	unsigned char	*str;
+
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		str[i] = '\0';
+		i++;
+	}
+	s = str;
 }

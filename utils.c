@@ -6,7 +6,7 @@
 /*   By: aadnane <aadnane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:00:57 by aadnane           #+#    #+#             */
-/*   Updated: 2022/05/18 16:10:31 by aadnane          ###   ########.fr       */
+/*   Updated: 2022/05/19 22:46:50 by aadnane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,7 @@ void	ft_putnbr(int n)
 	}
 }
 
-void	ft_putstr(char *str)
-{
-	write(1, str, ft_strlen(str));
-}
-
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
