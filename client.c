@@ -6,7 +6,7 @@
 /*   By: aadnane <aadnane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:51:30 by aadnane           #+#    #+#             */
-/*   Updated: 2022/05/22 20:54:33 by aadnane          ###   ########.fr       */
+/*   Updated: 2022/05/28 15:51:35 by aadnane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int	main(int ac, char **av)
 			if (ac == 3)
 			{
 			i = 0;
-				while (av[2][i])
+				while (av[2][i] != '\0')
 				{
 					ft_dec_to_bin(av[2][i], pid);
 				i++;
 				}
-				ft_dec_to_bin(av[2][i], pid);
+				ft_dec_to_bin('\0', pid);
 			}		
 		}
 		else

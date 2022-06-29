@@ -6,7 +6,7 @@
 /*   By: aadnane <aadnane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:02:21 by aadnane           #+#    #+#             */
-/*   Updated: 2022/05/22 20:10:20 by aadnane          ###   ########.fr       */
+/*   Updated: 2022/05/28 15:48:36 by aadnane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_dec_to_bin(char c, int pid)
 	unsigned int		res;
 
 	i = 0;
-	base = 0b10000000;
+	base = 128;
 	while (i < 8)
 	{
 		res = base & c;
